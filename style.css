@@ -1,0 +1,278 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;  
+    /* text-shadow: 1px 1px grey; */
+}
+
+html
+{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    font-size: 62.5%;
+    /* line-height: 1.5; */
+}
+body
+{
+    padding-left: 30rem;
+    min-height: 100vh;
+}
+/* Background animation start */
+.container1
+        {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            background-color: black;
+        }
+        .bubbles
+        {
+            position: relative;
+            display: flex;
+        }
+        .bubbles span{
+            position: relative;
+            width: 30px;
+            height: 30px;
+            background: #4fc3dc;
+            margin: 0 4px;
+            border-radius: 50%;
+            box-shadow: 0 0 0 10px #4fc3dc44,
+            0 0 50px #4fc3dc, 
+            0 0 100px #4fc3dc;
+            animation: animate 15s linear infinite;
+            animation-duration: calc(125s / var(--i));
+
+        }
+        .bubbles span:nth-child(even){
+            background: #ff2d75;
+            box-shadow: 0 0 0 10px #ff2d7544,
+            0 0 25px #ff2d75, 
+            0 0 100px #ff2d75;
+        }
+
+        @keyframes animate
+        {
+            0% { transform: translateY(100vh)scale(0);}
+            /* 50% { transform:translateY(-20vh) scale(1);} */
+            100% {transform: translateY(-10vh)scale(2);}
+        }
+/* Background animation end */
+/* Header section start */
+nav ul li a
+{
+   font-size: 2rem;
+   text-decoration: none;
+   display: block;
+   margin: 1rem 0 ;
+}
+h1
+{
+    color: white;
+    font-weight: bolder;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    background-color: black;
+    padding: 8rem 2rem;
+    flex-flow: column;
+    width: 30rem;
+    text-align: center;
+}
+header nav ul li a{
+    display: block;
+    font-size: 2rem;
+    margin: 2rem 0;
+    color: white;
+}
+header nav ul li a:hover
+{
+    letter-spacing: .2rem;
+}
+ div a{
+    display: inline;
+    font-size: 2.5rem;
+    margin: 0 .7rem ;
+    color: white;
+}
+/* Home section start */
+#home
+{
+    position: relative;
+    background-image: url(bg-img-2.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+#home div
+{
+    float: right;
+    color: white;
+    font-size: 3.5rem;
+    margin: 200px 100px;
+   
+}
+#home button
+{
+    border-radius: 10px;
+    color: white;
+}
+/* Home section end */
+
+/* About section start */
+#about
+{
+    min-height: 100vh;
+}
+#about  img {
+    border-radius: 200px;
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+}
+#about p{
+    font-size: 2.5rem;
+    
+}
+
+/* About section end */
+
+/* Skills section start */
+#skill
+{
+    min-height: 100vh;
+}
+ h2{
+    font-size: 3.5rem;
+    padding: 3%;
+    text-align: center;
+    text-decoration: underline;
+
+}
+h2:hover
+{
+    color: darkblue;
+    font-size:3.8rem ;
+    transition-duration: 1s;
+}
+#skill .col-2
+{
+    background-color: white;
+    color: darkblue;
+    height: 150px;
+    width: 200px;
+    margin: 1.2rem;
+    padding: 0 auto;
+    box-shadow:5px 5px 5px 5px rgb(229, 227, 227);
+}
+#skill .col-4
+{
+    background-color: white;
+    color: darkblue;
+    height: 150px;
+    width: 200px;
+    margin: 1.2rem;
+    padding: 0 auto;
+    box-shadow:5px 5px 5px 5px rgb(229, 227, 227);
+}
+#skill span{
+    font-size: 2rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding: 3rem;
+}
+
+#skill .col:hover
+{
+    background-color: darkblue;
+    color: white;
+    transition: 1s;
+    transform: scale(1.1,1.1);
+}
+#skill span
+{
+    transition: 1s;
+    transform: scale(1.1,1.1);
+    font-size: 2.5rem;
+}
+/* skills section end */
+
+/* Project section start */
+#projects
+{
+    min-height: 100vh;
+}
+.card 
+{
+    font-size: 2rem;
+    width: 30rem;
+}
+.card:hover
+{
+    background-color: darkblue;
+    color: white;
+    transition: 1s;
+    transform: scale(1.1,1.1);
+}
+.card-title
+{
+    font-size: 2.8rem;
+}
+/* Project section end */
+/* Contact section start */
+#contact
+{
+    min-height: 100vh;
+}
+#contact h1{
+    color: black;
+    text-align: center;
+}
+#contact .bi span
+{
+    font-size: 20px;
+}
+#contact .bi
+{
+    font-size: 30px;
+    box-shadow:5px 5px 5px 5px rgb(229, 227, 227);
+    text-align: center;
+}
+#contact .bi:hover
+{
+    background-color: darkblue;
+    color: white;
+    transition: 1s;
+   
+}
+#contact label 
+{
+    font-size: 2rem;
+}
+#contact input
+{
+    height: 35px;
+    border: 1px black solid;
+}
+textarea
+{
+    resize: none;
+    border: 1px black solid;
+}
+/* contact section end */
